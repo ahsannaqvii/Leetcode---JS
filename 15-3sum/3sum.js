@@ -39,7 +39,9 @@ var threeSum = function (nums) {
                 while (left < right && nums[right] === nums[right + 1]) {
                     right--
                 }
-            } else if (currSum > 0) {
+            } 
+            //Since the array is sorted, the elements on the right will always be greater, so if the sum is greater, --right
+            else if (currSum > 0) {
                 right--
             } else if (currSum < 0) {
                 left++
